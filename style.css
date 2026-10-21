@@ -1,0 +1,187 @@
+/* LA City pools — a working preview of recreation.parks.lacity.gov/aquatics with one live
+   schedule behind every pool. The chrome copies the department's site (rust band, teal and
+   purple side cards, cream page); everything inside the white sheet is the proposal. */
+:root{
+  --rust:   #d14c29;   /* the department band, headings and buttons */
+  --rust-d: #9d391f;   /* link text */
+  --navy:   #10232a;   /* the city bar */
+  --teal:   #00808c;   /* the Citywide Aquatics card header */
+  --purple: #615898;   /* the Facility Category card header */
+  --cream:  #f8f1e8;   /* page background */
+  --ink:    #212529;
+  --rule:   #e3d9cc;
+  --muted:  #6c6357;
+  --open:   #1f8a4c;   /* in the water now */
+  --soon:   #c27c0e;   /* opens later today */
+  --shut:   #8a8278;   /* nothing today */
+  --lap:    #2f6fb3;
+  --rec:    #e08a1e;
+  --fit:    #7a4fb0;
+  --learn:  #2a9d8f;
+  --team:   #b5485d;
+}
+*{ box-sizing:border-box }
+html,body{ margin:0 }
+body{ font:16px/1.55 Lato, system-ui, -apple-system, "Segoe UI", sans-serif; color:var(--ink); background:var(--cream) }
+a{ color:var(--rust-d) }
+button{ font:inherit }
+
+.preview-note{ background:#1b1b1b; color:#fff; font-size:14px; line-height:1.5; padding:9px 18px; text-align:center }
+.preview-note b{ color:#f0a58a }
+.preview-note a{ color:#fff }
+
+.citybar{ background:var(--navy); color:#fff; font-size:13px; padding:7px 20px; display:flex; align-items:center; gap:10px }
+.citybar .seal{ width:18px; height:18px; border-radius:50%; background:#c9c2b6; flex:none }
+.citybar .right{ margin-left:auto; display:flex; gap:8px }
+.citybar .right span{ border:1px solid rgba(255,255,255,.55); border-radius:3px; padding:3px 9px; font-size:12px }
+.deptband{ background:var(--rust); color:#fff; text-align:center; padding:9px 20px; font-size:15.5px }
+header.site{ background:#fff; padding:14px 20px 0 }
+.hdr-top{ display:flex; align-items:center; gap:12px; max-width:1240px; margin:0 auto 12px }
+.hdr-top .pill{ background:#1f4b5a; color:#fff; border-radius:4px; padding:6px 13px; font-size:13.5px }
+.hdr-top .right{ margin-left:auto; display:flex; gap:22px; font-size:14px; color:var(--rust-d) }
+.hdr-nav{ display:flex; align-items:center; gap:26px; max-width:1240px; margin:0 auto; padding-bottom:14px; flex-wrap:wrap }
+.hdr-nav img.logo{ height:44px; width:auto }
+.hdr-nav span.link{ font-size:15.5px }
+.hdr-nav .search{ margin-left:auto; border:1px solid #cfc7bb; border-radius:5px; padding:7px 14px; min-width:170px; color:#9a938a; font-size:14px }
+.hdr-nav .login{ background:var(--rust); color:#fff; border-radius:5px; padding:7px 18px; font-size:15px }
+.stripes{ height:7px; background:linear-gradient(90deg,#e8733f 0 22%, #d14c29 22% 55%, #f0a26e 55% 78%, #d14c29 78% 100%) }
+
+.wrap{ max-width:1240px; margin:0 auto; padding:22px 20px 40px }
+.cols{ display:grid; grid-template-columns:240px minmax(0,1fr); gap:22px; align-items:start }
+.card{ background:#fff; border:1px solid var(--rule); border-radius:4px; overflow:hidden; margin-bottom:18px }
+.card-header{ color:#fff; padding:9px 14px; font-size:15px }
+.card-header.aq{ background:var(--teal) }
+.card-header.cat{ background:var(--purple) }
+.card ul{ margin:0; padding:12px 14px 14px; list-style:none }
+.card li{ font-size:14.5px; padding:3px 0 }
+.card li a{ text-decoration:none }
+.card li.here a{ font-weight:700; color:var(--ink) }
+
+.sheet{ background:#fff; border:1px solid var(--rule); border-radius:4px; padding:22px 24px 26px; min-width:0 }
+h1{ font-size:28px; line-height:1.2; color:var(--rust); margin:0 0 8px; font-weight:900 }
+h2{ font-size:20px; color:var(--rust-d); margin:30px 0 10px; text-wrap:balance }
+.lede{ font-size:16.5px; margin:0 0 18px; max-width:68ch }
+.hr{ border:0; border-top:1px solid var(--rule); margin:26px 0 }
+.muted{ color:var(--muted) }
+
+/* ── The finder ─────────────────────────────────────────────────────────────── */
+.finder{ border:1px solid var(--rule); border-radius:6px; background:#fffaf4 }
+.finder .bar{ display:flex; flex-wrap:wrap; gap:14px 22px; padding:14px 16px; border-bottom:1px solid var(--rule) }
+.finder fieldset{ border:0; margin:0; padding:0; min-width:0 }
+.finder legend{ font-size:11.5px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:6px; padding:0 }
+.chips{ display:flex; flex-wrap:wrap; gap:6px }
+.chip{ border:1px solid #d6cbbb; background:#fff; border-radius:999px; padding:5px 12px; font-size:14px; cursor:pointer; color:var(--ink) }
+.chip[aria-pressed="true"]{ background:var(--teal); border-color:var(--teal); color:#fff }
+.chip:focus-visible{ outline:3px solid #f0a26e; outline-offset:1px }
+.chip.near{ border-style:dashed }
+.finder .summary{ padding:10px 16px; font-size:15px; display:flex; flex-wrap:wrap; gap:6px 16px; align-items:baseline; border-bottom:1px solid var(--rule) }
+.finder .summary b{ font-size:17px }
+
+.split{ display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,1fr); min-height:560px }
+.results{ list-style:none; margin:0; padding:0; max-height:720px; overflow:auto; border-right:1px solid var(--rule) }
+#map{ min-height:560px; height:100%; background:#e9e4dc }
+
+.pool{ display:grid; grid-template-columns:76px minmax(0,1fr); gap:12px; padding:13px 16px; border-bottom:1px solid var(--rule); background:#fff }
+.pool:hover, .pool.hl{ background:#fff6ec }
+.pool .ph{ width:76px; height:58px; border-radius:4px; background:#ddd center/cover no-repeat }
+.pool h3{ margin:0; font-size:16.5px; line-height:1.3 }
+.pool h3 a{ color:var(--ink); text-decoration:none }
+.pool h3 a:hover{ text-decoration:underline }
+.pool .where{ font-size:13.5px; color:var(--muted) }
+.pool .state{ margin:5px 0 0; font-size:14.5px; font-weight:700 }
+.pool .state.open{ color:var(--open) }
+.pool .state.soon{ color:var(--soon) }
+.pool .state.shut{ color:var(--shut) }
+.pool .state .dot{ display:inline-block; width:9px; height:9px; border-radius:50%; background:currentColor; margin-right:6px; vertical-align:1px }
+.pool .state.open .dot{ animation:pulse 1.6s ease-in-out infinite }
+@keyframes pulse{ 50%{ opacity:.35 } }
+@media (prefers-reduced-motion:reduce){ .pool .state.open .dot{ animation:none } }
+.pool .sess{ margin:6px 0 0; padding:0; list-style:none; font-size:14px; display:flex; flex-direction:column; gap:2px }
+.pool .sess li{ display:flex; gap:8px; align-items:baseline }
+.pool .sess .t{ font-variant-numeric:tabular-nums; min-width:118px; color:#3b362f }
+.pool .sess .k{ display:inline-block; width:8px; height:8px; border-radius:2px; flex:none; transform:translateY(-1px) }
+.pool .sess .n{ color:var(--muted); font-size:13px }
+.pool .sess li.past{ opacity:.45 }
+.pool .sess li.now .t{ font-weight:700; color:var(--open) }
+
+.tl{ position:relative; height:12px; margin:8px 0 2px; background:#f1ebe2; border-radius:3px; overflow:hidden }
+.tl i{ position:absolute; top:0; bottom:0; border-radius:2px; opacity:.9 }
+.tl .nowline{ position:absolute; top:-2px; bottom:-2px; width:2px; background:var(--ink) }
+.tlscale{ display:flex; justify-content:space-between; font-size:11px; color:var(--muted); font-variant-numeric:tabular-nums }
+
+.legend{ display:flex; flex-wrap:wrap; gap:4px 14px; font-size:13px; color:var(--muted); padding:10px 16px }
+.legend span::before{ content:""; display:inline-block; width:10px; height:10px; border-radius:2px; margin-right:5px; background:var(--c); vertical-align:-1px }
+
+.k-lap{ --c:var(--lap); background:var(--lap) } .k-rec{ --c:var(--rec); background:var(--rec) }
+.k-fit{ --c:var(--fit); background:var(--fit) } .k-learn{ --c:var(--learn); background:var(--learn) }
+.k-team{ --c:var(--team); background:var(--team) } .k-other{ --c:#8b8378; background:#8b8378 }
+
+.empty{ padding:22px 16px; color:var(--muted) }
+.later-h{ padding:10px 16px 6px; font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); background:#faf6f0; border-bottom:1px solid var(--rule) }
+
+/* ── Calendar frames ──────────────────────────────────────────────────────── */
+.frame{ border:1px solid var(--rule); border-radius:4px; overflow:hidden; background:#fff; box-shadow:0 8px 22px rgba(60,40,25,.10) }
+.frame iframe{ display:block; width:100%; border:0 }
+.cal-foot{ font-size:14px; color:var(--muted); margin:8px 0 0 }
+
+/* ── Static lists ─────────────────────────────────────────────────────────── */
+.grid-list{ display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:8px 18px; list-style:none; margin:0; padding:0; font-size:14.5px }
+.grid-list li span{ display:block; color:var(--muted); font-size:13px }
+details.more{ border:1px solid var(--rule); border-radius:4px; margin:12px 0; background:#fff }
+details.more summary{ cursor:pointer; padding:11px 14px; font-weight:700; color:var(--rust-d) }
+details.more > div{ padding:4px 16px 16px }
+.fees{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px }
+.fees table{ border-collapse:collapse; width:100%; font-size:14.5px }
+.fees td{ padding:4px 0; border-bottom:1px dotted var(--rule) }
+.fees td:last-child{ text-align:right; font-variant-numeric:tabular-nums }
+
+.replaces{ margin-top:26px; background:#fdf0ea; border-left:4px solid var(--rust); padding:16px 20px; border-radius:0 4px 4px 0 }
+.replaces h2{ margin-top:0 }
+.replaces ul{ margin:0; padding-left:20px }
+.replaces li{ margin-bottom:9px; max-width:80ch }
+
+/* ── One pool's page ──────────────────────────────────────────────────────── */
+.back{ font-size:15px; display:inline-block; margin-bottom:12px }
+.facts{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:18px 26px }
+.facts img{ width:100%; height:auto; border-radius:4px }
+.facts dl{ margin:0 }
+.facts dt{ font-weight:700; font-size:15px }
+.facts dd{ margin:0 0 9px; font-size:15px }
+.today{ border:1px solid var(--rule); border-radius:6px; background:#fffaf4; padding:12px 16px; margin:18px 0 }
+.today .pool{ padding:0; border:0; background:none; grid-template-columns:minmax(0,1fr) }
+.today .pool:hover{ background:none }
+.finding{ margin:22px 0 0; padding:14px 18px; border-left:4px solid var(--rust); background:#fdf0ea; font-size:15px }
+.finding b{ color:var(--rust-d) }
+.finding ul{ margin:8px 0 0; padding-left:20px }
+.finding li{ margin-bottom:6px }
+.btns{ display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 0 }
+.btn{ display:inline-block; background:var(--rust); color:#fff; border-radius:5px; padding:8px 16px; font-size:15px; text-decoration:none }
+.btn.ghost{ background:#fff; color:var(--rust-d); border:1px solid var(--rust) }
+
+footer.site{ background:var(--navy); color:#fff; padding:24px 20px; font-size:14px; margin-top:32px }
+footer.site .in{ max-width:1240px; margin:0 auto }
+footer.site a{ color:#fff }
+footer.site .fine{ max-width:1240px; margin:16px auto 0; padding-top:13px; border-top:1px solid rgba(255,255,255,.25); font-size:12.5px; color:#bcc7cb }
+
+.leaflet-popup-content{ font:14px/1.45 Lato, system-ui, sans-serif; margin:10px 12px }
+.leaflet-popup-content b{ font-size:15px }
+
+@media (max-width:1000px){
+  .cols{ grid-template-columns:1fr }
+  aside{ display:none }
+}
+@media (max-width:820px){
+  .split{ grid-template-columns:1fr }
+  .results{ max-height:none; border-right:0 }
+  #map{ min-height:320px; height:320px; order:-1; border-bottom:1px solid var(--rule) }
+  .facts{ grid-template-columns:1fr }
+  .citybar .right, .hdr-top .right, .hdr-nav span.link, .hdr-nav .search{ display:none }
+  .wrap{ padding:14px 12px 30px }
+  .sheet{ padding:16px 14px 20px }
+  h1{ font-size:24px }
+}
+@media (max-width:420px){
+  .pool{ grid-template-columns:1fr }
+  .pool .ph{ display:none }
+  .pool .sess .t{ min-width:104px }
+}

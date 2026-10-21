@@ -1,0 +1,211 @@
+{
+ "views": {
+  "hub": "NJkiERvC7J7cK4xOTFFM6C,ckGEZB2KZdC4sIGDvXGXxw",
+  "day": "NJkiERvC7J7cK4xOTFFM6C"
+ },
+ "dayHeight": 900,
+ "pools": {
+  "algin-sutton-pool": {
+   "facility": "Algin Sutton Pool",
+   "findings": [
+    "The page dates its hours “(September 6 – October 23)” and the closure “starting: October 23”, so a swimmer can’t tell whether the 23rd is open. The calendar treats it as closed.",
+    "The brochure runs the season to January 3; the page stops at October 23 and says reopening is “projected” for December 3.",
+    "Lesson sessions 2 and 3 are struck through in the brochure."
+   ],
+   "view": "qWWMGE2Qu3V8DphiWNittg"
+  },
+  "banning-pool": {
+   "facility": "Banning Pool",
+   "findings": [
+    "“Lap Swim (20 yd lanes)”, but never how many lanes. The calendar’s split is our estimate."
+   ],
+   "view": "8n1qA8iC3DExpTTO7LmpJg"
+  },
+  "celes-king-iii-pool": {
+   "facility": "Celes King III Pool",
+   "findings": [
+    "The brochure closes the pool from November 20 to January 1. The page doesn’t mention it.",
+    "“Lap swim lanes are limited” on three of four lap blocks, with no count.",
+    "The page still lists the August 9 – September 12 hours above the current ones."
+   ],
+   "view": "CxBkWqSnBkdnQXB4MMI2BP"
+  },
+  "eleanor-green-robert-aquatic": {
+   "facility": "Eleanor Green Roberts Aquatic Center",
+   "findings": [
+    "The page says the season starts October 20; the brochure says October 21, after a closure for repairs."
+   ],
+   "view": "HjeBZ7Sapu4QXPak2FkEhV"
+  },
+  "glassell-pool": {
+   "facility": "Glassell Pool",
+   "findings": [
+    "The page’s whole Hours of Operation section is “Glassell pool is now Open, Heated.” The hours are only in a PDF.",
+    "That PDF closes the pool from October 22 to December 3. The page says nothing about it, and nothing is published for after December 3."
+   ],
+   "view": "m6bB15V6gsGEV0Y56r4eyH"
+  },
+  "granada-hills-pool": {
+   "facility": "Granada Hills Pool",
+   "findings": [
+    "The page says lap and rec swim run Monday–Friday; the brochure, updated September 12, says Tuesday–Friday. The calendar follows the brochure.",
+    "The page’s “Holiday Hours” are July 3 and September 7, both past."
+   ],
+   "view": "UScGEpARTQx9To3aBM2MpN"
+  },
+  "hubert-h-humphrey-pool": {
+   "facility": "Hubert H. Humphrey Pool",
+   "findings": [
+    "The page shows hours “Effective August 13, 2026” and no closure. The brochure closes the pool from October 23 to December 3.",
+    "“Limited Lap Lane Availability”, no count."
+   ],
+   "view": "ePOHKc7N5Uyf5VxvSIEpb5"
+  },
+  "laces-aquatic": {
+   "facility": "LACES Aquatic Center",
+   "findings": [
+    "The page’s hours are for August 9 – September 6. The current ones are only in the PDF.",
+    "The winter closure, December 18 to January 29, is only in the PDF.",
+    "One lesson is printed “3:30–3:33pm”."
+   ],
+   "view": "gBcxjripvn9Gu8n1ZCv4Ui"
+  },
+  "richard-alatorre-pool": {
+   "facility": "Richard Alatorre Pool",
+   "findings": [
+    "Hours with no dates. The season runs September 13 to January 2 per the brochure, with the pool closed October 23 to December 3.",
+    "Lesson registration for sessions 2 and 3 is canceled."
+   ],
+   "view": "fP9BMoAhkvpyX12005r2DU"
+  },
+  "van-ness-pool": {
+   "facility": "Van Ness Aquatic Center",
+   "findings": [
+    "New hours “Starting October 21”, with a September closure flyer still attached.",
+    "The holidays are only in the brochure."
+   ],
+   "view": "woxLb9lHq63BIUcQDCyYpk"
+  },
+  "van-nuys-sherman-oaks-pool": {
+   "facility": "Van Nuys Sherman Oaks Pool",
+   "findings": [
+    "The brochure closes the pool from November 13 to December 26. The page lists only single holidays, including “Friday November 13 Pool Closed”.",
+    "Hours with no dates on the page."
+   ],
+   "view": "0kMsqrU1BAR6rrM0qiURic"
+  },
+  "venice-high-school-indoor-pool": {
+   "facility": "Venice High School Indoor Pool",
+   "findings": [
+    "The only brochure attached is Summer 2026.",
+    "“Pool Closed for Maintenance beginning: Friday, December 18th, 2026 – TBD.”",
+    "“Limited lanes available” for lap swim and aqua jogging, no count."
+   ],
+   "view": "Bl7zlgREak9r0GmLSUpRvB"
+  },
+  "verdugo-hills-pool": {
+   "facility": "Verdugo Hills Pool",
+   "findings": [
+    "The page still says the pool “will be reopening Saturday October 10th”; the brochure says it’s closed until November 6. The calendar follows the page."
+   ],
+   "view": "exgJC7aYIP3JkzrhKGXjSA"
+  },
+  "yosemite-pool": {
+   "facility": "Yosemite Pool",
+   "findings": [
+    "Listed as a year-round pool, but its page sits under /aquatic/summer/.",
+    "“Limited lanes available”, no count."
+   ],
+   "view": "FHfmKHq5fvKNVSpZWXFPvr"
+  },
+  "lincoln-park-pool": {
+   "facility": "Lincoln Park Pool",
+   "findings": [
+    "The page says “Temporarily closed for maintenance until 11/6”; the brochure says through November 11. The calendar follows the page.",
+    "The page lists Monday hours; the brochure says the pool is closed Mondays.",
+    "Neither says when lap swim and rec swim run; both list only “Hours of Operation”."
+   ],
+   "view": "OiubFgzllSGd7tnA8d3LmI"
+  },
+  "westwood-pool": {
+   "facility": "Westwood Pool",
+   "findings": [
+    "The page’s hours section reads “** See Fall Brochure Attachment **”.",
+    "The brochure gives lesson start times only; the 25-minute lengths on the calendar are our reading."
+   ],
+   "view": "KPowesCVwTsjzxE1ITfRtI"
+  },
+  "echo-park-indoor-pool": {
+   "facility": "Echo Park Indoor Pool",
+   "findings": [
+    "The page has no hours, only “projected reopening date is October 29”. The brochure attached is named “final-draft”.",
+    "“Lanes available vary, please call us for more info.”"
+   ],
+   "view": "PC8KFP7pCDjD7DDLV15C20"
+  },
+  "hollywood-pool": {
+   "facility": "Hollywood Pool",
+   "findings": [
+    "The page labels the fall hours “September 13 – September 24”; the brochure runs them to January 2.",
+    "“Limited lap swim lanes & no backstroke flags on North side of pool deck.”"
+   ],
+   "view": "N12Lg7NTcJAufWGr2ihoWw"
+  },
+  "john-c-argue-swim-stadium": {
+   "facility": "John C. Argue Swim Stadium",
+   "findings": [
+    "“Limited lanes”, but never how many. 2 of the 5 is our estimate.",
+    "The fall hours run “September 8 – November 13” and the maintenance closure “November 13 – December 25”.",
+    "December 31 is listed as closed and as a half day, 1–5pm. “MLKD/Juneteenth (January 19)” puts two holidays on one wrong date."
+   ],
+   "view": "ckGEZB2KZdC4sIGDvXGXxw"
+  },
+  "dymally-high-school-pool": {
+   "closedNote": "Open, heated. Its page gives hours with no dates, and its only brochure is last summer’s, so they aren’t on the calendar yet.",
+   "findings": [
+    "The hours on the page carry no dates; class registration dates on the page are January to April 2026.",
+    "The “Brochure” button opens the Summer 2026 brochure. The contact email is the Green Meadows pool’s."
+   ]
+  },
+  "cleveland-aquatic-center": {
+   "closedNote": "Closed for maintenance since September 8. The pool hopes to reopen in early December.",
+   "findings": []
+  },
+  "fremont-pool": {
+   "closedNote": "Closed until further notice.",
+   "findings": []
+  },
+  "hey-rookie-pool": {
+   "closedNote": "Closed: reopening is delayed until further notice.",
+   "findings": [
+    "The page says reopening is “delayed until further notice”, and right below it posts Fall 2026 hours from September 13.",
+    "The brochure button opens the Summer 2026 brochure."
+   ]
+  },
+  "peck-pool": {
+   "closedNote": "Closed until further notice.",
+   "findings": []
+  },
+  "roosevelt-pool": {
+   "closedNote": "Closed. The only notice on its page is dated September 18, 2025.",
+   "findings": [
+    "No hours; the only document is a closure notice dated 9-18-25."
+   ]
+  },
+  "woodland-hills-pool": {
+   "closedNote": "Closed for maintenance since September 25. No reopening date announced.",
+   "findings": [
+    "The hours section is headed “Summer 2026”."
+   ]
+  }
+ },
+ "replaces": [
+  "<strong>Twenty-six pages to answer one question.</strong> To find a lap swim at 7 tonight, a swimmer opens the year-round pools one at a time. Each types its hours in its own format: a table, a list, a PDF, or a sentence.",
+  "<strong>Status in one place, hours in another.</strong> The year-round list says “OPEN, HEATED” or “CLOSED”, and a separate map has current status, but neither has hours. Glassell’s page says “now Open, Heated” while its brochure closes the pool October 22.",
+  "<strong>Hours that have expired, or have no dates.</strong> LACES posts August 9 – September 6. Hollywood posts September 13 – 24. Seven pools post hours with no dates at all.",
+  "<strong>The real schedule is in a PDF.</strong> Glassell and Westwood publish their hours only in the brochure. Five pools have closures that appear only in the PDF: Celes King III, Glassell, Hubert H. Humphrey, LACES and Van Nuys Sherman Oaks. Three pages still attach last summer’s brochure.",
+  "<strong>“Limited lanes,” never how many.</strong> Nine pools say lap lanes are limited, on the page or in the brochure, and none gives a number. The calendars here show lanes: where the pool hasn’t said, the count is our estimate, and one number from the pool makes it exact.",
+  "<strong>The counts disagree with themselves.</strong> The aquatics page says “28 seasonal swimming pools, 26 year-round,” and further down “Twenty four pools operate year round” and “Twenty Seven (summer) pools.”",
+  "<strong>One schedule instead.</strong> Each pool enters its season once, in a chat or in the calendar. The finder, the citywide day view and the pool’s own page all update together, and a closure ends on its own date."
+ ]
+}
