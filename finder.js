@@ -130,7 +130,9 @@
     let state, line;
     if (closure) {
       state = "shut";
-      const until = closure.endDate && closure.endDate !== closure.date ? ` through ${monthDay(closure.endDate)}` : "";
+      // An open-ended closure is stored with a placeholder end; say so rather than print it.
+      const openEnded = /until a reopening date is announced/i.test(closure.description || "");
+      const until = openEnded ? ", no reopening date yet" : closure.endDate && closure.endDate !== closure.date ? ` through ${monthDay(closure.endDate)}` : "";
       line = `${closure.title}${until}`;
     } else if (live.length) {
       state = "open";
