@@ -95,7 +95,7 @@ window.POOLS = [
 "name": "John C. Argue Swim Stadium",
 "area": "South LA",
 "kind": "yearRound",
-"address": "",
+"address": "3980 Bill Robertson Lane, Los Angeles, CA 90037",
 "lat": 34.0121136,
 "lng": -118.2900832,
 "photo": "https://recreation.parks.lacity.gov/sites/default/files/styles/facility_large/public/facility/expo-center-la84-foundation/john-c-argue-swim-stadium/images/image000002.JPG?itok=337S-zfp",
