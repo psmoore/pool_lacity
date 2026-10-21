@@ -122,8 +122,11 @@
     const closure = evs.find((o) => o.allDay && o.date <= day && (o.endDate || o.date) >= day && /clos/i.test(o.title));
     const sessions = closure ? [] : evs.filter((o) => !o.allDay && o.date === day && (kind === "any" || o.kinds.includes(kind)));
     const isToday = day === TODAY;
-    const live = isToday ? sessions.filter((o) => mins(o.start) <= NOW && NOW < mins(o.end)) : [];
-    const later = isToday ? sessions.filter((o) => mins(o.start) > NOW) : sessions;
+    // When several sessions are on at once, name the one most swimmers come for.
+    const rank = (o) => (o.kinds.includes("lap") || o.kinds.includes("rec") ? 0 : o.kinds.includes("fit") ? 1 : 2);
+    const byInterest = (a, b) => mins(a.start) - mins(b.start) || rank(a) - rank(b);
+    const live = (isToday ? sessions.filter((o) => mins(o.start) <= NOW && NOW < mins(o.end)) : []).sort((a, b) => rank(a) - rank(b));
+    const later = (isToday ? sessions.filter((o) => mins(o.start) > NOW) : sessions).slice().sort(byInterest);
     let state, line;
     if (closure) {
       state = "shut";
